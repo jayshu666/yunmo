@@ -8,7 +8,7 @@
 <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=HZhjYj31bG578l8Ez4dmpw5yzq3Fbqz8"></script>
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://mapv.baidu.com/build/mapv.js"></script>
-
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
 
 </head>
 
@@ -195,7 +195,29 @@
         </div>
     </div>
 </div>
-
+<script>
+    L2Dwidget.init({
+        "model": {
+            jsonPath: "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",<!--这里改模型，前面后面都要改-->
+            "scale": 1
+        },
+        "display": {
+            "position": "right",<!--设置看板娘的上下左右位置-->
+            "width": 150,
+            "height": 300,
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.7,<!--设置透明度-->
+            "opacityOnHover": 0.2
+        }
+    });
+</script>
 </body>
 <script type="text/javascript">
 var map = new BMap.Map("dituContent");   
